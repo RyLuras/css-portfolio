@@ -1,0 +1,20 @@
+{
+  "name": "css-portfolio",
+  "version": "1.0.0",
+  "description": "beta portfolio",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss css/*.css -d build/css --watch"
+  },
+  "author": "Ryan Luras",
+  "license": "MIT",
+  "devDependencies": {
+    "postcss-cli": "^6.0.1",
+    "postcss-nested": "^4.1.0",
+    "postcss-simple-vars": "^5.0.1",
+    "autoprefixer": "^9.3.1",
+    "eslint": "^5.8.0"
+  },
+  "dependencies": {
+  }
+}
