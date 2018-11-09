@@ -1,4 +1,4 @@
-$nav: #262833;
+$nav: #16171e;
 $nav-hover: #3a3e59;
 $card-background: #FFFFFF;
 
@@ -12,6 +12,7 @@ body {
   grid-template-areas: "header header header"
                       "splash splash splash"
                       "card card card"
+                      "card2 card2 card2"
                       "footer footer footer";
 }
 header {
@@ -71,9 +72,10 @@ header {
     text-decoration: none;
   }
 }
-.card {
+.card, .card2 {
   border-radius: 25px 25px 25px 25px;
   margin-top: -80px;
+  margin-bottom: 150px;
   transition: 0.3s;
   background-color: $card-background;
   width: 800px;
@@ -103,7 +105,7 @@ header {
   color: #fff;
 }
 
-.card:hover {
+.card:hover, .card2:hover {
   box-shadow: 0 8px 16px 0 $nav;
 }
 
@@ -115,8 +117,8 @@ header {
 
 footer {
   grid-area: footer;
-  position: absolute;
-  bottom: 0; 
+  position: relative;
+  margin-top: 100px;
   width: 100vw;
 }
 fieldset {
