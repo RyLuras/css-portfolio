@@ -53,8 +53,8 @@ header {
     white-space: nowrap;
     letter-spacing: .15em;
     animation:
-      typingAnimation 2.5s steps(40, end),
-      cursor .85s step-end infinite;
+      typingAnimation 2.5s steps(35, end),
+      cursor 1s step-end infinite;
 }
 @keyframes fadein {
     0% { opacity: 0; }
