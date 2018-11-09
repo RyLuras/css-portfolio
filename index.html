@@ -16,7 +16,7 @@
                 <a href="#">Work</a>
                 <a href="#">About</a>
                 <a href="#">LinkedIn</a>
-                <a href="#">Contact</a>
+                <form action="mailto:ryanluras@gmail.com"><button>Contact</button></form>
             </div>
         </nav>
     </header>
@@ -26,7 +26,7 @@
     <section class="card-grid">
         <div class="card">
             <span class="card-header">Alchemy Companion App</span>
-            <img src="bootcamp.png" class="card-image" alt="project image">
+            <img src="./assets/bootcamp.png" class="card-image" alt="project image">
             <div class="card-container">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam culpa, et expedita fuga laboriosam ea officia excepturi minus assumenda, tenetur, facere repudiandae reiciendis commodi velit. Quos delectus esse cum eveniet.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam culpa, et expedita fuga laboriosam ea officia excepturi minus assumenda, tenetur, facere repudiandae reiciendis commodi velit. Quos delectus esse cum eveniet.</p>
@@ -39,9 +39,34 @@
     <footer>
         <nav>  
             <div class="footer-content">
+                <br>
+                <form id="contact-form" action="mailto:ryanluras@gmail.com" enctype="text/plain">
+                    <fieldset>
+                        <legend>
+                            Have an idea for a project? Drop me a line.
+                        </legend>
+                        Project Name:
+                        <input required type="text" tabindex="1">
+                        Short Description:
+                        <input required type="text" tabindex="2">
+                        Featured Image:
+                        <input type="file" id="file-input" accept=".jpg,.png,.pdf">
+                        <br>
+                        Please check technologies used:
+                        <div class="check-boxes">
+                        <input type="checkbox" value="Vue">Vue
+                        <input type="checkbox" value="React">React
+                        <input type="checkbox" value="Node">Node
+                        <input type="checkbox" value="Express">Express
+                        <input type="checkbox" value="MongoDB">MongoDB
+                        <input type="checkbox" value="PostgresSQL">PostgresSQL
+                        </div>
+                        <br>
+                        Click to send an email with this form attached:
+                        <button tabindex="4 name="submit" type="submit" id="contact-submit">Submit</button>
+                    </fieldset>
+                </form>
                 <p>© Ryan Luras &nbsp 2018 &nbsp All rights reserved</p>
-                <a href="#">LinkedIn</a>
-                <a href="#">Contact</a>
             </div>
         </nav>
     </footer>

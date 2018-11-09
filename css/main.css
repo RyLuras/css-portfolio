@@ -16,6 +16,17 @@ body {
 }
 header {
   grid-area: header;
+  button {
+    background: none;
+    text-align: center;
+    color: #fff;
+	  border: none;
+    margin-right: 20px;
+	  font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+	  cursor: pointer;
+    font-weight: bold;
+  }
 }
 .splash-grid {
   grid-area: splash;
@@ -106,32 +117,31 @@ footer {
   grid-area: footer;
   position: absolute;
   bottom: 0; 
-  width: 100%;
+  width: 100vw;
 }
-
+fieldset {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background: $nav-hover;
+  button {
+    margin-top: -1.5em;
+    margin-left: 80%;
+  }
+}
 .footer-content {
   display: flex;
-  flex-direction: row;
+  font-weight: bold;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: $nav;
-  height: 40px;
-  p {
-    width: 100%;
-    background: $nav;
-    text-align: left;
-    color: #fff;
-    text-decoration: none;
-    margin-left: 100px;
+  input {
+    margin: 5px;
   }
-  a {
-    display: flex;
-    justify-content: center;
-    background: $nav;
-    width: 50%;
+  p {
     text-align: center;
     color: #fff;
-    text-decoration: none;
   }
 }
 
