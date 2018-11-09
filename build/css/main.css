@@ -1,5 +1,5 @@
 body {
-  background: #e6e7f7;
+  background: #f7f7f7;
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
@@ -42,6 +42,51 @@ header button {
     margin: 0 auto;
     grid-area: card;
 }
+.typing  {
+    font-size: 1em;
+    overflow: hidden;
+    border-right: .15em solid #FFF;
+    white-space: nowrap;
+    letter-spacing: .15em;
+    -webkit-animation:
+      typingAnimation 2.5s steps(40, end),
+      cursor .85s step-end infinite;
+            animation:
+      typingAnimation 2.5s steps(40, end),
+      cursor .85s step-end infinite;
+}
+@-webkit-keyframes fadein {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    75% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadein {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    75% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes typingAnimation {
+  from { width: 0 }
+  to { width: 85% }
+}
+
+@keyframes typingAnimation {
+  from { width: 0 }
+  to { width: 85% }
+}
+
+@-webkit-keyframes cursor {
+  from, to { border-color: transparent }
+  50% { border-color: #FFF; }
+}
+
+@keyframes cursor {
+  from, to { border-color: transparent }
+  50% { border-color: #FFF; }
+}
 
 .menu-content {
   display: flex;
@@ -71,7 +116,9 @@ header button {
     text-decoration: none;
   }
 .card, .card2 {
-  border-radius: 25px 25px 25px 25px;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
+  border-radius: 5px 5px 5px 5px;
   margin-top: -80px;
   margin-bottom: 150px;
   transition: 0.3s;
@@ -87,11 +134,11 @@ header button {
 .card-image {
     grid-area: card-image;
     height: 400px;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 5px 5px 5px 5px;
   }
 
 .card-header {
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
   grid-area: card-header;
   display: flex;
   align-items: center;
@@ -147,6 +194,7 @@ fieldset button {
 
 
 @media screen and (max-width: 800px) {
+
   .menu-toggle {
     display: none;
   }
@@ -167,13 +215,14 @@ fieldset button {
   .footer-content {
     display: none;
   }
-  .card {
+  .card, .card2 {
     border-radius: 0px 0px 0px 0px;
     margin-top: 0px;
-    width: 100%;
+    width: 100vw;
     height: auto;
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
   }
   .card-header {
     border-radius: 0px 0px 0px 0px;
