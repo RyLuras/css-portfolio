@@ -46,6 +46,9 @@ header {
     margin: 0 auto;
     grid-area: card;
 }
+.typing-parent {
+  width: auto;
+}
 .typing  {
     font-size: 1em;
     overflow: hidden;
@@ -58,14 +61,13 @@ header {
 }
 @keyframes fadein {
     0% { opacity: 0; }
-    50% { opacity: 0; }
     75% { opacity: 0; }
     100% { opacity: 1; }
 }
 
 @keyframes typingAnimation {
   from { width: 0 }
-  to { width: 85% }
+  to { width: 100% }
 }
 
 @keyframes cursor {
@@ -99,7 +101,7 @@ header {
   }
 }
 .card, .card2 {
-  animation: fadein 3s;
+  animation: fadein 3.5s;
   border-radius: 5px 5px 5px 5px;
   margin-top: -80px;
   margin-bottom: 150px;
@@ -176,7 +178,12 @@ fieldset {
 
 
 @media screen and (max-width: 800px) {
-
+  .typing {
+    font-size: .5em;
+    animation: none;
+    border-right: none;
+    white-space: normal;
+  }
   .menu-toggle {
     display: none;
   }
@@ -198,6 +205,7 @@ fieldset {
     display: none;
   }
   .card, .card2 {
+    animation: none;
     border-radius: 0px 0px 0px 0px;
     margin-top: 0px;
     width: 100vw;

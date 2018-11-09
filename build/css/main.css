@@ -42,6 +42,9 @@ header button {
     margin: 0 auto;
     grid-area: card;
 }
+.typing-parent {
+  width: auto;
+}
 .typing  {
     font-size: 1em;
     overflow: hidden;
@@ -57,25 +60,23 @@ header button {
 }
 @-webkit-keyframes fadein {
     0% { opacity: 0; }
-    50% { opacity: 0; }
     75% { opacity: 0; }
     100% { opacity: 1; }
 }
 @keyframes fadein {
     0% { opacity: 0; }
-    50% { opacity: 0; }
     75% { opacity: 0; }
     100% { opacity: 1; }
 }
 
 @-webkit-keyframes typingAnimation {
   from { width: 0 }
-  to { width: 85% }
+  to { width: 100% }
 }
 
 @keyframes typingAnimation {
   from { width: 0 }
-  to { width: 85% }
+  to { width: 100% }
 }
 
 @-webkit-keyframes cursor {
@@ -116,8 +117,8 @@ header button {
     text-decoration: none;
   }
 .card, .card2 {
-  -webkit-animation: fadein 3s;
-          animation: fadein 3s;
+  -webkit-animation: fadein 3.5s;
+          animation: fadein 3.5s;
   border-radius: 5px 5px 5px 5px;
   margin-top: -80px;
   margin-bottom: 150px;
@@ -194,7 +195,13 @@ fieldset button {
 
 
 @media screen and (max-width: 800px) {
-
+  .typing {
+    font-size: .5em;
+    -webkit-animation: none;
+            animation: none;
+    border-right: none;
+    white-space: normal;
+  }
   .menu-toggle {
     display: none;
   }
@@ -216,6 +223,8 @@ fieldset button {
     display: none;
   }
   .card, .card2 {
+    -webkit-animation: none;
+            animation: none;
     border-radius: 0px 0px 0px 0px;
     margin-top: 0px;
     width: 100vw;
