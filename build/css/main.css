@@ -7,8 +7,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "header header header"
                       "splash splash splash"
-                      "card card card"
-                      "card2 card2 card2"
+                      "cards cards cards"
                       "footer footer footer";
 }
 header {
@@ -39,14 +38,13 @@ header button {
     margin-top: -80px;
   }
 .card-grid {
-    margin: 0 auto;
-    grid-area: card;
+    grid-area: cards;
 }
 .typing-parent {
   width: auto;
 }
 .typing  {
-    font-size: 1em;
+    font-size: .9em;
     overflow: hidden;
     border-right: .15em solid #FFF;
     white-space: nowrap;
@@ -116,16 +114,17 @@ header button {
     color: #fff;
     text-decoration: none;
   }
-.card, .card2 {
+.card, .card2, .card3 {
   -webkit-animation: fadein 3.5s;
           animation: fadein 3.5s;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 8px 8px 8px 8px;
+  margin:auto;
   margin-top: -80px;
   margin-bottom: 150px;
   transition: 0.3s;
   background-color: #FFFFFF;
-  width: 800px;
-  height: 450px;
+  width: 80%;
+  height: 350px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "card-header card-header"
@@ -133,13 +132,19 @@ header button {
 }
 
 .card-image {
-    grid-area: card-image;
-    height: 400px;
-    border-radius: 5px 5px 5px 5px;
+  grid-area: card-image;
+  align-content: center;
+  width: auto;
+  overflow: hidden;
+  border-radius: 0px 0px 0px 8px;
+  }
+
+.card-image img {
+    width: 100%;
   }
 
 .card-header {
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 8px 8px 0px 0px;
   grid-area: card-header;
   display: flex;
   align-items: center;
@@ -147,18 +152,21 @@ header button {
   width: 100%;
   height: 2em;
   font-size: 1.5em;
-  background-color: #3a3e59;
+  background-color: #663e75;
   color: #fff;
 }
 
-.card:hover, .card2:hover {
+.card:hover, .card2:hover, .card3:hover {
   box-shadow: 0 8px 16px 0 #16171e;
 }
 
 .card-container {
-  padding: 2px 16px;
   display: flex;
+  margin-left: 10px;
   flex-direction: column;
+  justify-content: space-evenly;
+  width: 95%;
+  height: 95%;
 }
 
 footer {
@@ -167,16 +175,7 @@ footer {
   margin-top: 100px;
   width: 100vw;
 }
-fieldset {
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  background: #3a3e59;
-}
-fieldset button {
-    margin-top: -1.5em;
-    margin-left: 80%;
-  }
+
 .footer-content {
   display: flex;
   font-weight: bold;
@@ -185,14 +184,37 @@ fieldset button {
   justify-content: center;
   background-color: #16171e;
 }
-.footer-content input {
-    margin: 5px;
-  }
+
 .footer-content p {
     text-align: center;
     color: #fff;
   }
-
+.footer-links {
+  display: flex;
+  flex-direction: row;
+   align-items: center;
+  justify-content: center;
+}
+.footer-links a {
+    font-weight: bold;
+    padding: 10px 10px;
+    background: #16171e;
+    width: 25%;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+  }
+.footer-links button {
+    background: none;
+    text-align: center;
+    color: #fff;
+	  border: none;
+    margin-right: 20px;
+	  font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+	  cursor: pointer;
+    font-weight: bold;
+  }
 
 @media screen and (max-width: 800px) {
   .typing {
@@ -212,6 +234,8 @@ fieldset button {
       padding: 10px;
       margin-top: 25px;
     }
+
+
   .menu-content {
     display: flex;
     flex-direction: row;
@@ -219,10 +243,7 @@ fieldset button {
     .menu-content a {
       padding: 10px 0;
     }
-  .footer-content {
-    display: none;
-  }
-  .card, .card2 {
+  .card, .card2, .card3 {
     -webkit-animation: none;
             animation: none;
     border-radius: 0px 0px 0px 0px;
@@ -231,9 +252,20 @@ fieldset button {
     height: auto;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 8px 16px 0 #16171e;
     margin-bottom: 40px;
   }
+    .card img, .card2 img, .card3 img {
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: top;
+         object-position: top;
+    }
   .card-header {
+    border-radius: 0px 0px 0px 0px;
+  }
+  .card-image {
+    height: 250px;
     border-radius: 0px 0px 0px 0px;
   }
 }
