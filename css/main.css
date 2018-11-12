@@ -29,6 +29,14 @@ header {
     font-weight: bold;
   }
 }
+.error {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  text-align: center;
+  color: red;
+  z-index: 5;
+}
 .splash-grid {
   grid-area: splash;
   background: $nav;
