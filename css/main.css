@@ -17,17 +17,6 @@ body {
 }
 header {
   grid-area: header;
-  button {
-    background: none;
-    text-align: center;
-    color: #fff;
-	  border: none;
-    margin-right: 20px;
-	  font-family: 'Raleway', sans-serif;
-    font-size: 1em;
-	  cursor: pointer;
-    font-weight: bold;
-  }
 }
 .error {
   position: absolute;
@@ -61,7 +50,7 @@ header {
     overflow: hidden;
     border-right: .15em solid #FFF;
     white-space: nowrap;
-    letter-spacing: .15em;
+    letter-spacing: .12em;
     animation:
       typingAnimation 2.5s steps(35, end),
       cursor 1s step-end infinite;
@@ -86,7 +75,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   background-color: $nav;
   height: 80px;
   span {
@@ -98,13 +87,24 @@ header {
     margin-left: 50px;
   }
   a {
+    margin: 25px;
     font-weight: bold;
-    padding: 10px 10px;
     background: $nav;
-    width: 25%;
     text-align: center;
     color: #fff;
     text-decoration: none;
+  }
+  button {
+    margin-right: 50px;
+    margin-left: 10px;
+    background: none;
+    text-align: center;
+    color: #fff;
+	  border: none;
+	  font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+	  cursor: pointer;
+    font-weight: bold;
   }
 }
 .card, .card2, .card3 {
@@ -160,6 +160,22 @@ header {
   height: 95%;
 }
 
+.card-container > a > button {
+  background-color: $card-header;
+  width: auto;
+  height: 2em;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 5px;
+  border-radius: 8px 8px 8px 8px;
+}
+.card-container > a > button:hover {
+    box-shadow: 0 8px 10px 0 $nav;
+  }
+
 footer {
   grid-area: footer;
   position: relative;
@@ -183,12 +199,12 @@ footer {
   display: flex;
   flex-direction: row;
    align-items: center;
-  justify-content: center;
    a {
     font-weight: bold;
     padding: 10px 10px;
     background: $nav;
     width: 25%;
+    margin-right: 10px;
     text-align: center;
     color: #fff;
     text-decoration: none;
@@ -223,13 +239,19 @@ footer {
       margin-top: 25px;
     }
   }
-
+  .card-container > a > button {
+    box-shadow: 0 5px 8px 0 $nav;
+    height: 20px;
+  }
 
   .menu-content {
     display: flex;
     flex-direction: row;
     a {
       padding: 10px 0;
+    }
+    button {
+      margin-right: 20px;
     }
   }
   .card, .card2, .card3 {
@@ -243,8 +265,8 @@ footer {
     box-shadow: 0 8px 16px 0 $nav;
     margin-bottom: 40px;
     img {
+      height: inherit;
       object-fit: cover;
-      object-position: top;
     }
   }
   .card-header {
